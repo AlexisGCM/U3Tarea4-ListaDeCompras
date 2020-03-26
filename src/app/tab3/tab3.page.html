@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="secondary">
+      Aun no comprados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="medium" class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label color="primary">Insumos No Comprados</ion-label>
+    </ion-list-header>
+    <div *ngFor="let insumo of insumos; index as i">
+      <ion-item *ngIf="!insumo.active">
+        <ion-label>{{insumo.name}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>  
+
+</ion-content>
